@@ -1,38 +1,88 @@
+/* App.css */
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.selectionArea {
+  height: 35px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.selectionArea > div {
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#firstSelector {
+  padding: 10px 0 0;
+}
+
+#lastSelector {
+  padding: 0 0 10px;
+}
+
+input[type=checkbox] {
+  width: 20px; 
+  height: 20px;
+}
+
+#milk, #sugar {
+  font-size: 16px;
+}
+
+#orderCoffee {
+  width: 180px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.coffee-options {
+  margin-bottom: 20px;
+}
+
+.coffee-display {
+  margin-top: 20px;
+}
+
+.coffee-display > h2 {
+  margin: 10px 0 0;
+}
+
+.coffee-display > p {
+  margin: 10px 0 0;
+}
+
+
+.coffee-cup {
+  margin: 20px auto 0;
+  position: relative;
+  width: 140px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #6F4C3E; /* Kaffee-Farbe */
+  overflow: hidden;
+}
+
+.coffee-liquid {
+  position: absolute;
+  width: 100%;
+  height: 80%; /* Höhe des Kaffees */
+  background: #3E2A23; /* Dunklere Kaffee-Farbe */
+  bottom: 0;
+  transition: background-color 0.3s ease;
+}
+
+.with-milk .coffee-liquid {
+  background-color: #957667; /* Coffee with Milk Color */
+}
+
+.sugar-cube {
+  position: absolute;
+  width: 15px; /* Größe der Zuckerwürfel */
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: white; /* Farbe der Zuckerwürfel */
+  border-radius: 2px; /* Abgerundete Ecken */
 }
